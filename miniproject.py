@@ -331,7 +331,7 @@ def option_4(chain_id_list, infofile_list):
                 if line.startswith('SHEET'):
                     if line[21] == chain_id_list[x]:
                         sheet_identifier_list.append(line[11:14])
-        print(sheet_identifier_list)
+      
 
         sheet_index1_list = []
         for line in infofile_list:
@@ -345,7 +345,7 @@ def option_4(chain_id_list, infofile_list):
             if line.startswith('HELIX'):
                 if line[19] == chain_id_list[x]:
                     helix_identifier_list.append(line[11:14])
-        print(helix_identifier_list)
+        
 
 
         helix_index1_list = []
@@ -360,7 +360,6 @@ def option_4(chain_id_list, infofile_list):
         
         
         for i,j,k in zip(sheet_strandnumber_list,sheet_identifier_list, sheet_index1_list):
-                print(i,j)
                 if len(i.strip()) == 1 and len(j.strip()) == 1:
                     tag_list[int(k)] = i.strip()
                     tag_list[int(k)+1] = j.strip()
@@ -379,7 +378,7 @@ def option_4(chain_id_list, infofile_list):
                 tag_list[int(j)] = index_list[0][0]
                 tag_list[int(j)+1] = index_list[0][1]           
             
-            print(tag_list)
+           
                             
         tag_string = ''.join(tag_list)
         for char in tag_string:
